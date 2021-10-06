@@ -1,0 +1,3 @@
+com\recode\framework\automation\ui\vt\functional\jenkins\JenkinsJobTest.class
+com\recode\framework\automation\ui\vt\functional\jenkins\JenkinsInfoTest.class
+com\recode\framework\automation\ui\vt\functional\jenkins\JenkinsAccessTest.class

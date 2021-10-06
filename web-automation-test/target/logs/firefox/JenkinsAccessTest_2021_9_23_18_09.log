@@ -1,0 +1,7 @@
+[INFO ] 2021-09-23 18:09:11.054 launchApplication():1061 - The given URL -http://192.168.0.103:8080/- is launched successfully.
+[INFO ] 2021-09-23 18:09:27.319 sleep():63 - Sleeping for 1 seconds.
+[INFO ] 2021-09-23 18:09:33.008 sleep():63 - Sleeping for 5 seconds.
+[INFO ] 2021-09-23 18:09:34.737 sleep():63 - Sleeping for 1 seconds.
+[INFO ] 2021-09-23 18:09:40.502 sleep():63 - Sleeping for 5 seconds.
+[INFO ] 2021-09-23 18:09:52.997 isHomePageTitleExists():143 - HomePage is displayed Successfully
+[INFO ] 2021-09-23 18:09:56.850 clickManageJenkinsLink():67 - Clicked Manage Jenkins Link Successfully.

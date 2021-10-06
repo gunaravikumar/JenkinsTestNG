@@ -1,0 +1,3 @@
+Note: Enter the details without any spaces
+GridHub=http://192.168.0.103
+GridNodePort=5555
