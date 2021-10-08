@@ -137,11 +137,11 @@
                     </suiteXmlFiles>
                     <properties>
                         <property>
-                            <name>testNames</name>
+                            <name>testnames</name>
                             <value>${selectedTests}</value>
                         </property>
                         <property>
-                            <name>useDefaultListeners</name>
+                            <name>usedefaultlisteners</name>
                             <value>false</value> <!-- disabling default listeners is optional -->
                         </property>
                         <property>
