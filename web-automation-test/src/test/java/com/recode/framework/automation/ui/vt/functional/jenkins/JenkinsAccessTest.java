@@ -116,6 +116,7 @@ public class JenkinsAccessTest extends TestClass {
         }
     }
 
+    /*
     @Test(priority = 3, description = "To Create Global Credential for Git Access in Jenkins")
     public void createCredentialsInJenkins () throws Exception {
         String testID = "Test_123";
@@ -377,6 +378,7 @@ public class JenkinsAccessTest extends TestClass {
         Reporter.log("<br>4. Verified the page title after navigating to the pipeline url<br>");
 
     }
+    */
 
     @AfterMethod
     public void tearDown() {

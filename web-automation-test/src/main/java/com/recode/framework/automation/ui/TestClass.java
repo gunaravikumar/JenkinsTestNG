@@ -14,6 +14,8 @@ import org.testng.annotations.BeforeTest;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 
 public class TestClass {
 
@@ -112,8 +114,12 @@ public class TestClass {
             options.addArguments("disable-infobars");
             options.addArguments("--disable-notifications");
             options.addArguments("--disable-popup-blocking");
-            options.addArguments("--headless");
+            //options.addArguments("--headless");
             options.addArguments("start-maximized");
+            Map<String, Object> prefs = new HashMap<String, Object>();
+            prefs.put("credentials_enable_service", false);
+            prefs.put("profile.password_manager_enabled", false);
+            options.setExperimentalOption("prefs", prefs);
             options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
             options.setExperimentalOption("useAutomationExtension", false);
             getDesiredCapabilities().setCapability(ChromeOptions.CAPABILITY,options);
@@ -124,7 +130,7 @@ public class TestClass {
             getDesiredCapabilities().setBrowserName("firefox");
             getDesiredCapabilities().setCapability("marionette",true);
             FirefoxOptions options = new FirefoxOptions();
-            options.setHeadless(true);
+            //options.setHeadless(true);
             options.merge(getDesiredCapabilities());
 
         } else {

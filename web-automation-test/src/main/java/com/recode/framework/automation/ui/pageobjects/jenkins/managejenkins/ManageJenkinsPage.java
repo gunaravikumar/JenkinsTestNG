@@ -19,11 +19,11 @@ public class ManageJenkinsPage extends PageClass {
     }
     private By systemConfigHeaderSection(){ return By.xpath("//h2[text()='System Configuration']"); }
     private By securitySection(){ return By.xpath("//h2[text()='Security']"); }
-    private By manageUserLink(){ return By.xpath("//a[@title='Manage Users']");}
+    private By manageUserLink(){ return By.xpath("//dt[text()='Manage Users']");}
     private By manageCredentialsLink() {
-        return By.xpath("//a[@title='Manage Credentials']");
+        return By.xpath("//dt[text()='Manage Credentials']");
     }
-    private By manageNodesAndCloudsLink() { return By.xpath("//a[@title='Manage Nodes and Clouds']");}
+    private By manageNodesAndCloudsLink() { return By.xpath("//dt[text()='Manage Nodes and Clouds']");}
 
     //Test Methods here
 

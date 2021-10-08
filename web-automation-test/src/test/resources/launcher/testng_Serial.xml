@@ -3,7 +3,7 @@
 <suite name= "Jenkins_Automation">
 
     <test name="JenkinsAccessTest">
-        <parameter name="browser" value="firefox"/>
+        <parameter name="browser" value="chrome"/>
         <classes>
             <class name="com.recode.framework.automation.ui.vt.functional.jenkins.JenkinsAccessTest"/>
         </classes>
