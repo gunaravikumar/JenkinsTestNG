@@ -114,7 +114,7 @@ public class TestClass {
             options.addArguments("disable-infobars");
             options.addArguments("--disable-notifications");
             options.addArguments("--disable-popup-blocking");
-            //options.addArguments("--headless");
+            options.addArguments("--headless");
             options.addArguments("start-maximized");
             Map<String, Object> prefs = new HashMap<String, Object>();
             prefs.put("credentials_enable_service", false);
