@@ -23,7 +23,7 @@ public class LoginPage extends PageClass {
     }
 
     private By signInButton() {
-        return By.xpath("//*[@class='submit formRow']");
+        return By.name("Submit");
     }
 
     //Test Methods here
