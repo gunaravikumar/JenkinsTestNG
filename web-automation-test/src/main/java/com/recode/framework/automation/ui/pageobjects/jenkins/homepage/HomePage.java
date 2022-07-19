@@ -21,7 +21,7 @@ public class HomePage extends PageClass {
     //Locator values here
 
     private By logoutButton() { return By.xpath("//a[contains(.,'log out')]"); }
-    private By manageJenkinsLink(){ return By.xpath("//a[contains(.,'Create User')]");}
+    private By manageJenkinsLink(){ return By.xpath("//a[contains(.,'Manage Jenkins')]");}
     private By newItemLink(){
         //return By.className("task-link");
         return By.xpath("//a[contains(.,'New Item')]");

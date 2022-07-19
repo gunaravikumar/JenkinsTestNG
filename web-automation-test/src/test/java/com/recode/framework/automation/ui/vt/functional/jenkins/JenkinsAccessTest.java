@@ -67,7 +67,7 @@ public class JenkinsAccessTest extends TestClass {
         loginPage.launchApplication(appURL);
     }
 
-    @Test(priority = 1, description = "To check Login functionality.")
+    /*@Test(priority = 1, description = "To check Login functionality.")
     public void jenkinsLoginTest() throws Exception {
         String testID = "12345";
         Reporter.log("<br><strong>Testcase ID: </strong>"+ testID + "<br>");
@@ -83,7 +83,7 @@ public class JenkinsAccessTest extends TestClass {
         Reporter.log("<br>2. Verified the Jenkins home page title after logged into application.<br>");
         homePage.clickLogout();
         Reporter.log("<br>3. Logged out from the Jenkins application.<br>");
-    }
+    }*/
 
     @Test(priority = 2, description = "To create user in Jenkins")
     public void createUserInJenkins() throws Exception {
@@ -114,6 +114,32 @@ public class JenkinsAccessTest extends TestClass {
         {
             Logger.instance.error("New user is not listed out in user list table");
         }
+    }
+
+    @Test(priority = 3, description = "Deleting created user in jenkins")
+    public void deleteUserInJenkins() throws Exception {
+        String testID = "987456";
+        Reporter.log("<br><strong>Testcase ID: </strong>" + testID + "<br>");
+        String testCaseName = "deleteUserInJenkins";
+        //Update automation config file with your username and password
+        String username = Utils.getAutomationProperties().getProperty("Username");
+        String password = Utils.getAutomationProperties().getProperty("Password");
+        String jenkinsUser = ExcelUtils.getTestData(testData, "CreateUserDetails", testID, "UserName");
+        sequence.loginJenkins(username, password);
+        Assert.assertTrue(homePage.isHomePageTitleExists(), "JenkinsHome Page doesn't exists");
+        Reporter.log("<br>1. Verified the Jenkins home page title after logged into application<br>");
+        homePage.clickManageJenkinsLink();
+        Assert.assertTrue(managePage.isManagePageTitleExists(), "JenkinsManage Page doesn't exists");
+        Reporter.log("<br>2. Verified the Jenkins manage page is displayed when clicked on Manage jenkins link <br>");
+        managePage.clickManageUsersOption();
+        boolean isUserExists = userPage.isUserExists(jenkinsUser);
+        Assert.assertTrue(isUserExists,"New jenkinsUser is not listed out in jenkinsUser list table");
+        Reporter.log("<br>3. User is listed in jenkins application <br>");
+        userPage.deleteUserClick();
+        deleteUsersPage.clickDeleteConfirmButton();
+        isUserExists = userPage.isUserExists(jenkinsUser);
+        Assert.assertFalse(isUserExists,"Jenkins User is not deleted from user list");
+        Reporter.log("<br>4. User is deleted from jenkins application <br>");
     }
 
     /*

@@ -18,7 +18,7 @@ public class UsersPage extends PageClass {
 
     //Locator values here
 
-    private By createUserLink(){ return By.xpath("//a[@title='Create User']");}
+    private By createUserLink(){ return By.xpath("//a[contains(.,'Create User')]");}
     private By userNameField(){ return By.xpath("//input[@id='username']");}
     private By passwordField(){ return By.xpath("//input[@name='password1']");}
     private By confirmPasswordField(){ return By.xpath("//input[@name='password2']");}
