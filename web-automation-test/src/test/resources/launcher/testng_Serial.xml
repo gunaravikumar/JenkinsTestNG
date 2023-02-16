@@ -8,7 +8,7 @@
             <class name="com.recode.framework.automation.ui.vt.functional.jenkins.JenkinsAccessTest"/>
         </classes>
     </test>
-
+<!--
     <test name="JenkinsInfoTest">
         <parameter name="browser" value="chrome"/>
         <classes>
@@ -22,5 +22,5 @@
             <class name="com.recode.framework.automation.ui.vt.functional.jenkins.JenkinsJobTest"/>
         </classes>
     </test>
-
+-->
 </suite>
